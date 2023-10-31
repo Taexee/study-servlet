@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @WebServlet(name = "helloServlet", urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
-
+    // 서블릿이 호출되면 service메서드 실행
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -24,6 +24,5 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
         response.getWriter().write("hello " + username);
-
     }
 }
